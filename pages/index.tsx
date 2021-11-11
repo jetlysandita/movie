@@ -7,7 +7,6 @@ import { MovieComponent } from "../components/movie";
 import { MoviesComponent } from "../components/movies";
 import { InfiniteScroll } from "../hoc/infinite-scroll";
 import { useMovies } from "../hooks/use-movies";
-import Head from "next/Head";
 
 const { Content } = Layout;
 const Home: NextPage = () => {
@@ -21,12 +20,6 @@ const Home: NextPage = () => {
 
   return (
     <PageHeader title="Movies">
-      <Head>
-        <meta
-          httpEquiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </Head>
       <SearchComponent />
       <Content style={{ padding: "1rem 0" }}>
         <MovieComponent />
